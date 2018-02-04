@@ -1,0 +1,37 @@
+<a href="#/bradford"><button class="btn btn-default">Data Table</button></a>
+<a href="#/bradford/stat"><button class="btn btn-default">Statistic</button></a>
+<br>
+
+<section>
+	<table id="myTable" class="table table-hover">
+		<thead>
+			<tr>
+				<th><a href="#/" ng-click="orderByField='yyyy'; reverseSort = !reverseSort">
+			  Year<span ng-show="orderByField == 'yyyy'"><span ng-show="!reverseSort">&#8593</span><span ng-show="reverseSort">&#8595</span></span></a>
+				</th >
+				<th>Month</th >
+				<th><a href="#/" ng-click="orderByField='tmax'; reverseSort = !reverseSort">
+			  T max&#176;C<span ng-show="orderByField == 'tmax'"><span ng-show="!reverseSort">&#8593</span><span ng-show="reverseSort">&#8595</span></span></a></th >
+				<th><a href="#/" ng-click="orderByField='tmin'; reverseSort = !reverseSort">
+			  T min&#176;C<span ng-show="orderByField == 'tmin'"><span ng-show="!reverseSort">&#8593</span><span ng-show="reverseSort">&#8595</span></span></a></th >
+				<th><a href="#/" ng-click="orderByField='af'; reverseSort = !reverseSort">
+			  Af days<span ng-show="orderByField == 'af'"><span ng-show="!reverseSort">&#8593</span><span ng-show="reverseSort">&#8595</span></span></a></th >
+				<th><a href="#/" ng-click="orderByField='rain'; reverseSort = !reverseSort">
+			  Rain mm<span ng-show="orderByField == 'rain'"><span ng-show="!reverseSort">&#8593</span><span ng-show="reverseSort">&#8595</span></span></a></th >
+				<th><a href="#/" ng-click="orderByField='sun'; reverseSort = !reverseSort">
+			 Sun hours<span ng-show="orderByField == 'sun'"><span ng-show="!reverseSort">&#8593</span><span ng-show="reverseSort">&#8595</span></span></a></th >
+			</tr >
+		</thead>
+		<tbody>
+			<tr ng-repeat="ik in countries |orderBy:orderByField:reverseSort">
+			  <td>{{ik.yyyy}}</td>
+			  <td>{{ik.mm }}</td>
+			  <td>{{ik.tmax}}</td>
+			  <td>{{ik.tmin }}</td>
+			  <td>{{ik.af }}</td>
+			  <td>{{ik.rain}}</td>
+			  <td>{{ik.sun}}</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

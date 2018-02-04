@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>UK Weather Info</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+	<script src="pages/oxford/oxfordCtrl.js"></script>
+	<script src="pages/bradford/bradfordCtrl.js"></script>
+	<script src="pages/sheffield/sheffieldCtrl.js"></script>
+	<script src="pages/southampton/southamptonCtrl.js"></script>
+	<script src="pages/valley/valleyCtrl.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+</head>
+<body>
+	<div class="page-header">
+  		<h2>UK Weather Info</h2>
+	</div>
+	<ul class="nav nav-pills">
+		<li ><a href="#/bradford" >Bradford</a></li>
+		<li ><a href="#/">Oxford</a></li>
+		<li><a href="#/sheffield">Sheffield</a></li>
+		<li><a href="#/southampton">Southampton</a></li>
+		<li><a href="#/valley">Valley</a></li>
+	</ul>
+
+	<div class="row">
+    	<div ng-view>
+    	<!-- Представление будет здесь -->
+    	</div>
+	</div>
+
+</body>
+</html>
